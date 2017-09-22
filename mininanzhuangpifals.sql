@@ -3835,6 +3835,30 @@ CREATE TABLE `lr_product_sc` (
 -- Records of lr_product_sc
 -- ----------------------------
 
+-- ----------------------------
+-- Table structure for `lr_indeximg`
+-- ----------------------------
+DROP TABLE IF EXISTS `lr_indeximg`;
+CREATE TABLE `lr_indeximg` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cid` int(11) NOT NULL DEFAULT '0' COMMENT '分类ID',
+  `name` varchar(50) DEFAULT NULL COMMENT '分类产品',
+  `photo` varchar(100) NOT NULL COMMENT '图片',
+  `sort` int(11) NOT NULL DEFAULT '0' COMMENT '排序',
+  `ptype` char(10) DEFAULT NULL COMMENT '用于前端跳转事件识别',
+  `link` char(10) DEFAULT NULL COMMENT '用于前端跳转页面识别',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+-- ----------------------------
+-- Records of lr_indeximg
+-- ----------------------------
+INSERT INTO `lr_indeximg` VALUES ('1', '0', '限时抢购', 'UploadFiles/category/indeximg/1501664328940905.png', '1', 'xian', 'other');
+INSERT INTO `lr_indeximg` VALUES ('2', '0', '新品推荐', 'UploadFiles/category/indeximg/1501664336640324.png', '2', 'newpro', 'other');
+INSERT INTO `lr_indeximg` VALUES ('3', '0', '新人礼券', 'UploadFiles/category/indeximg/1501664344763119.png', '3', 'vou', 'other');
+INSERT INTO `lr_indeximg` VALUES ('4', '0', '全部商品', 'UploadFiles/category/indeximg/1501664356925524.png', '4', 'allpro', 'other');
+
+
 
 -- ----------------------------
 -- Table structure for `lr_program`
